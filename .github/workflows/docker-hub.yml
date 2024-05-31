@@ -20,7 +20,7 @@ services:
       # container will listen on all the IPs (v4 and v6) found in DNS or /etc/hosts
       # for the container's hostname.  Or it can be set to "*", to listen on ALL
       # available addresses (the way the standard poste.io image does).
-      - "LISTEN_ON=1.2.3.4 5.6.7.8 90a:11:12::13"
+      - "LISTEN_ON=*"
 
       # Whitespace-separated list of IP addresses mail can be sent from; the first
       # one in the list will be the default.  Like LISTEN_ON, it can be set to '*'
@@ -30,6 +30,6 @@ services:
       # is read to determine the outgoing IP for each domain, and the result is
       # validated against this list.  If this variable is empty or unset, it defaults
       # to whatever LISTEN_ON was set to.
-      - "SEND_ON=9.10.11.12"
+      - "SEND_ON=*"
 
       # Other standard poste.io vars can also be used, e.g. HTTPS_PORT, etc.
